@@ -1,14 +1,12 @@
-package com.codeup.springblog;
+package com.codeup.springblog.Controllers.Controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import java.util.Random;
-
 @Controller
-public class DiceController {
+public class RollDiceController {
     @GetMapping("/roll-dice")
         public String diceRoll() {
             return "roll-dice";

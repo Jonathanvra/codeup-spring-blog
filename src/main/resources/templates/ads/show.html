@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="partials :: head ('Viewing an Ad')">
+    <title>Ad Show</title>
+</head>
+<body class="main-bg main-container">
+<nav th:replace="partials :: navbar"></nav>
+<main class="container">
+    <h1 th:text="${ad.title}"></h1>
+    <h2>By: <span th:text="${ad.userId}"></span></h2>
+    <h2>By: <span th:text="${ad.name.name}"></span></h2>
+    <p th:text="${ad.description}"></p>
+    <div th:each="category : ${ad.categories}">
+        <h6 th:text="${category.name}"></h6>
+    </div>
+</main>
+<footer th:replace="partials :: footer"></footer>
+<div th:replace="partials :: boot-scripts"></div>
+</body>
+</html>

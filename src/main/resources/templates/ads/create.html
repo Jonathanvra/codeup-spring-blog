@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{partials :: head ('Create New Ad')}">
+</head>
+<body class="main-container main-bg">
+<nav th:replace="partials :: navbar"></nav>
+<main class="container">
+    <form action="/ads/create" method="post">
+        <label for="title">Post Title:</label>
+        <input type="text" name="title" id="title">
+        <label for="description">Post Body:</label> <br>
+        <textarea name="description" id="description" cols="30" rows="10"></textarea>
+        <button class="btn footer-bg" type="submit">Submit Ad</button>
+    </form>
+</main>
+<footer th:replace="partials :: footer"></footer>
+<div th:replace="partials :: boot-scripts"></div>
+</body>
+</html>

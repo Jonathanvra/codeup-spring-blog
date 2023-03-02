@@ -1,4 +1,4 @@
-package com.codeup.springblog;
+package com.codeup.springblog.Controllers.Controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,9 +14,9 @@ public class HelloController {
     }
 
     @GetMapping("/hello/{name}")
-    public String sayHello(Model model) {
-        model.addAttribute("name", "World");
-        return "hello";
+    @ResponseBody
+    public String sayHello(@PathVariable String name) {
+        return "hello" + name + "!";
     }
 
     @RequestMapping(path = "/increment/{number}", method = RequestMethod.GET)
